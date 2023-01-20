@@ -1,5 +1,5 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9-slim
-EXPOSE 8501
+EXPOSE $PORT
 WORKDIR /code
 COPY ./requirements.txt /code/requirements.txt
 COPY ./main.py /code/main.py
