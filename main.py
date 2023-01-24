@@ -8,7 +8,7 @@ st.write("""
 # Iris prediction app
 """)
 
-st.sidebar.header('User Input Parameters')
+st.sidebar.header('User Input')
 
 def user_input_features():
     sepal_length=st.sidebar.slider('Sepal Length cm',min_value=4.3,max_value=7.9,value=5.8)

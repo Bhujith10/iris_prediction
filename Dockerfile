@@ -1,9 +1,8 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9-slim
-EXPOSE $PORT
+FROM python:3.9-slim
 WORKDIR /code
 COPY ./requirements.txt /code/requirements.txt
 COPY ./main.py /code/main.py
 COPY ./random_forest_classifier.joblib /code/random_forest_classifier.joblib
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
-ENTRYPOINT ["streamlit", "run"]
-CMD ["main.py"]
+RUN pip install --upgrade -r requirements.txt
+EXPOSE 8501
+ENTRYPOINT ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
