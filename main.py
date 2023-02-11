@@ -5,7 +5,7 @@ import streamlit as st
 iris=['setosa', 'versicolor', 'virginica']
 
 st.write("""
-# Iris prediction app - Developed by _________
+# Iris prediction app - Developed by Bhujith Madav Velmurugan
 """)
 
 st.sidebar.header('User Input')
